@@ -263,6 +263,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4342673582910683337, guid: a83bd988a0200a8f89ab9fbb2740f848, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -279,6 +283,14 @@ PrefabInstance:
     - target: {fileID: 135843025042469079, guid: afe758fe925a31b79b557ef11beed8b6, type: 3}
       propertyPath: m_Name
       value: Lane
+      objectReference: {fileID: 0}
+    - target: {fileID: 1095154292478278842, guid: afe758fe925a31b79b557ef11beed8b6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 1095154292478278842, guid: afe758fe925a31b79b557ef11beed8b6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1095154292478278842, guid: afe758fe925a31b79b557ef11beed8b6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -319,6 +331,38 @@ PrefabInstance:
     - target: {fileID: 1095154292478278842, guid: afe758fe925a31b79b557ef11beed8b6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285083856059283893, guid: afe758fe925a31b79b557ef11beed8b6, type: 3}
+      propertyPath: m_Size.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285083856059283893, guid: afe758fe925a31b79b557ef11beed8b6, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285083856059283893, guid: afe758fe925a31b79b557ef11beed8b6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4873678859141350192, guid: be3787c4491608edea6cbad2e97ee6cf, type: 3}
+    - target: {fileID: 6285083856059283893, guid: afe758fe925a31b79b557ef11beed8b6, type: 3}
+      propertyPath: m_DrawMode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285083856059283893, guid: afe758fe925a31b79b557ef11beed8b6, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285083856059283893, guid: afe758fe925a31b79b557ef11beed8b6, type: 3}
+      propertyPath: m_SpriteTileMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6285083856059283893, guid: afe758fe925a31b79b557ef11beed8b6, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783005559243417676, guid: afe758fe925a31b79b557ef11beed8b6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.00744
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

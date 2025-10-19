@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 84e8349bfbd2e6aa3987cafed667f3e6
+guid: be3787c4491608edea6cbad2e97ee6cf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7675411797125314052
-    second: Lane_0
+      213: 4873678859141350192
+    second: Lane 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lane_0
+      name: Lane 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf9c087f2a57b7590800000000000000
-      internalID: -7675411797125314052
+      spriteID: 033837cb919c2a340800000000000000
+      internalID: 4873678859141350192
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lane_0: -7675411797125314052
+      Lane 1_0: 4873678859141350192
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
