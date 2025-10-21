@@ -211,6 +211,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &560159021 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3410856393404667650, guid: a83bd988a0200a8f89ab9fbb2740f848, type: 3}
+  m_PrefabInstance: {fileID: 1936051351}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &560159024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560159021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd31549268f5aee4988f94c156e3f282, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::carController
+  moveSpeed: 5
+  turnSpeed: 180
 --- !u!1001 &1936051351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -225,11 +244,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3609340159282911266, guid: a83bd988a0200a8f89ab9fbb2740f848, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.59
       objectReference: {fileID: 0}
     - target: {fileID: 3609340159282911266, guid: a83bd988a0200a8f89ab9fbb2740f848, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.67
       objectReference: {fileID: 0}
     - target: {fileID: 3609340159282911266, guid: a83bd988a0200a8f89ab9fbb2740f848, type: 3}
       propertyPath: m_LocalPosition.z
@@ -270,7 +289,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3410856393404667650, guid: a83bd988a0200a8f89ab9fbb2740f848, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 560159024}
   m_SourcePrefab: {fileID: 100100000, guid: a83bd988a0200a8f89ab9fbb2740f848, type: 3}
 --- !u!1001 &8930652312023209463
 PrefabInstance:
@@ -389,6 +411,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f27c5d8057717f827bb27fd11ca7176d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::levelGeneration
+  lanes: {fileID: 0}
+  width: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
