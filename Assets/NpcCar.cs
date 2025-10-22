@@ -1,5 +1,4 @@
 using System.ComponentModel;
-
 using UnityEngine;
 
 public class NpcCar : MonoBehaviour
@@ -30,11 +29,13 @@ public class NpcCar : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        speed = Vector2.Distance(transform.position, collision.transform.position) * 0.3f;
+        Debug.Log("Collision detected with " + collision.name);
+        speed = Vector2.Distance(transform.position, collision.transform.position) * 0.01f;
     }
 
-    private void OnTriggerExit(Collider other)
+    private void OnTriggerExit2D(Collider2D other)
     {
+        Debug.Log("Exited collision with " + other.name);
         speed = Random.Range(minSpeed, maxSpeed);
     }
 
