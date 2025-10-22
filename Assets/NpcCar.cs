@@ -14,6 +14,10 @@ public class NpcCar : MonoBehaviour
     Rigidbody2D rb;
     float speed;
 
+    private bool slowingDown = false;
+
+    private int carCount = 0;
+
     void Start()
     {
         boxCollider = transform.Find("CollisionPrevention").GetComponent<BoxCollider2D>();
@@ -24,21 +28,30 @@ public class NpcCar : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + Vector2.up * speed * Time.fixedDeltaTime);
+
+        if (carCount >= 1)
+        {
+            speed = 0.1f;
+        }
+        else
+        {
+            speed = 3f;
+        }
         // if (transform.position.y > despawnY) Destroy(gameObject);
     }
 
+
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collision detected with " + collision.name);
-        speed = Vector2.Distance(transform.position, collision.transform.position) * 0.01f;
+        carCount++;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Exited collision with " + other.name);
-        speed = Random.Range(minSpeed, maxSpeed);
+        carCount--;
     }
-
+    
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
