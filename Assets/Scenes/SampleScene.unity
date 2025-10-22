@@ -412,6 +412,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.6901961
       objectReference: {fileID: 0}
+    - target: {fileID: -4179366060809111052, guid: 45bc224a027b5c24eb8ff4ad2b003cba, type: 3}
+      propertyPath: maxSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -4179366060809111052, guid: 45bc224a027b5c24eb8ff4ad2b003cba, type: 3}
+      propertyPath: minSpeed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3410856393404667650, guid: 45bc224a027b5c24eb8ff4ad2b003cba, type: 3}
       propertyPath: m_Name
       value: NpcCar
