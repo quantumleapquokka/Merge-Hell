@@ -37,10 +37,5 @@ public class NPCcarSound : MonoBehaviour
             // Fade out when player leaves range
             hornSource.volume = Mathf.MoveTowards(hornSource.volume, 0f, volumeIncreaseSpeed * Time.deltaTime);
         }
-        Debug.Log($"Distance: {Vector2.Distance(transform.position, player.position)}  Volume: {hornSource.volume}");
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            hornSource.Play();
-        }
     }
 }
