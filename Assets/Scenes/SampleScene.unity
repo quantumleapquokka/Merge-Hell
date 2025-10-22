@@ -420,6 +420,22 @@ PrefabInstance:
       propertyPath: minSpeed
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: -2082880149384020697, guid: 45bc224a027b5c24eb8ff4ad2b003cba, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 560159026}
+    - target: {fileID: -2082880149384020697, guid: 45bc224a027b5c24eb8ff4ad2b003cba, type: 3}
+      propertyPath: hornSource
+      value: 
+      objectReference: {fileID: 798884770}
+    - target: {fileID: -2082880149384020697, guid: 45bc224a027b5c24eb8ff4ad2b003cba, type: 3}
+      propertyPath: detectionRadius
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2662587281188732653, guid: 45bc224a027b5c24eb8ff4ad2b003cba, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3410856393404667650, guid: 45bc224a027b5c24eb8ff4ad2b003cba, type: 3}
       propertyPath: m_Name
       value: NpcCar
@@ -480,6 +496,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df13f93834df33445b424a028c50b7fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!82 &798884770 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2662587281188732653, guid: 45bc224a027b5c24eb8ff4ad2b003cba, type: 3}
+  m_PrefabInstance: {fileID: 623489334}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1936051351
 PrefabInstance:
   m_ObjectHideFlags: 0
