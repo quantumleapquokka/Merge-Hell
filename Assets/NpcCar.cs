@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class NpcCar : MonoBehaviour
 {
-    [SerializeField] float minSpeed = 3f;
-    [SerializeField] float maxSpeed = 6f;
+    [SerializeField] float minSpeed = 2f;
+    [SerializeField] float maxSpeed = 3.5f;
     [SerializeField] private LayerMask obstacleMask;
 
     public float despawnY = 10f;
