@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class carController : MonoBehaviour
 {
+    public float speedLimiter = 1.0f;
     public float moveSpeed = 5f;
     public float turnSpeed = 180f;
 
@@ -19,7 +20,7 @@ public class carController : MonoBehaviour
         float turnInput = Input.GetAxis("Horizontal"); // Left/Right arrows (or A/D)
 
         // Move the car forward/backward
-        transform.Translate(Vector3.up * moveInput * moveSpeed * Time.deltaTime);
+        transform.Translate(Vector3.up * moveInput * moveSpeed * speedLimiter * Time.deltaTime);
 
         // Rotate the car
         transform.Rotate(Vector3.forward * -turnInput * turnSpeed * Time.deltaTime);
