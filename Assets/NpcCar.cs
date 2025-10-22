@@ -30,7 +30,7 @@ public class NpcCar : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        speed = minSpeed;
+        speed = Vector2.Distance(transform.position, collision.transform.position) * 0.3f;
     }
 
     private void OnTriggerExit(Collider other)

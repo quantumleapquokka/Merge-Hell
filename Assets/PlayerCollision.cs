@@ -14,7 +14,6 @@ public class PlayerCollision : MonoBehaviour
 
     void GameOver()
     {
-        Time.timeScale = 0f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
