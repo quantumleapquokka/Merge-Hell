@@ -1,5 +1,5 @@
 using System.ComponentModel;
-using System.Threading.Tasks.Dataflow;
+
 using UnityEngine;
 
 public class NpcCar : MonoBehaviour
@@ -8,7 +8,7 @@ public class NpcCar : MonoBehaviour
     [SerializeField] float maxSpeed = 3.5f;
     [SerializeField] private LayerMask obstacleMask;
 
-    private Component<BoxCollider2D> boxCollider = null;
+    private BoxCollider2D boxCollider = null;
 
     public float despawnY = 10f;
 
@@ -17,7 +17,7 @@ public class NpcCar : MonoBehaviour
 
     void Start()
     {
-        boxCollider = transform.find("CollisionPrevention").GetComponent<BoxCollider2D>();
+        boxCollider = transform.Find("CollisionPrevention").GetComponent<BoxCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         speed = Random.Range(minSpeed, maxSpeed);
     }
@@ -26,6 +26,16 @@ public class NpcCar : MonoBehaviour
     {
         rb.MovePosition(rb.position + Vector2.up * speed * Time.fixedDeltaTime);
         // if (transform.position.y > despawnY) Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        speed = minSpeed;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        speed = Random.Range(minSpeed, maxSpeed);
     }
 
     void Awake()
