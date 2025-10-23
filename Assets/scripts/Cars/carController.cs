@@ -1,3 +1,5 @@
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class carController : MonoBehaviour
@@ -6,10 +8,14 @@ public class carController : MonoBehaviour
     public float moveSpeed = 5f;
     public float turnSpeed = 180f;
 
+    public bool invincible = false;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        GameObject winText = transform.Find("Canvas").gameObject;
+        winText.SetActive(true);
+        winText.GetComponent<TextMeshPro>().enabled = true;
     }
 
     // Update is called once per frame
@@ -24,5 +30,12 @@ public class carController : MonoBehaviour
 
         // Rotate the car
         transform.Rotate(Vector3.forward * -turnInput * turnSpeed * Time.deltaTime);
+    }
+    public void displayWin()
+    {
+        GameObject winText = transform.Find("Canvas").gameObject;
+        winText.SetActive(true);
+        winText.GetComponent<TextMeshPro>().enabled = true;
+        invincible = true;
     }
 }

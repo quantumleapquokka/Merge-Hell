@@ -24,7 +24,11 @@ public class FrontSpawner : MonoBehaviour
     [Tooltip("How many cars this lane is allowed to spawn before stopping.")]
     public int perLaneSpawnLimit = 2;
 
+    public float speedLimiter = 0.02f;
+
     private Transform[] lastCarInLane;
+
+    public int wavesToSpawn = 3;
 
     void Awake()
     {
@@ -56,7 +60,7 @@ public class FrontSpawner : MonoBehaviour
         var shortWait = new WaitForSeconds(0.1f);
         int spawnCount = 0;
 
-        while (spawnCount < perLaneSpawnLimit)
+        while ((wavesToSpawn > 0) && (spawnCount < perLaneSpawnLimit))
         {
             if (npcCarPrefab == null || laneXs.Length == 0)
             {
@@ -68,6 +72,7 @@ public class FrontSpawner : MonoBehaviour
             {
                 SpawnInLane(laneIndex, spawnY);
                 spawnCount++;
+                wavesToSpawn--;
 
                 float wait = Mathf.Max(0f, Random.Range(minInterval, maxInterval));
                 yield return new WaitForSeconds(wait);
@@ -109,6 +114,9 @@ public class FrontSpawner : MonoBehaviour
         float x = laneXs[laneIndex];
         var pos = new Vector3(x, yPos, 0f);
         var car = Instantiate(npcCarPrefab, pos, Quaternion.identity);
+
+        NpcCar carScript = car.GetComponent<NpcCar>();
+        carScript.maxSpeed = 0.5f;
 
         lastCarInLane[laneIndex] = car != null ? car.transform : null;
     }

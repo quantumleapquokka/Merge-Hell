@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class NpcCar : MonoBehaviour
 {
-    [SerializeField] float minSpeed = 2f;
-    [SerializeField] float maxSpeed = 3.5f;
+    [SerializeField] float minSpeed = .01f;
+    [SerializeField] public float maxSpeed = 0.05f;
     [SerializeField] private LayerMask obstacleMask;
 
     private BoxCollider2D boxCollider = null;
@@ -12,7 +12,7 @@ public class NpcCar : MonoBehaviour
     public float despawnY = 10f;
 
     Rigidbody2D rb;
-    float speed;
+    public float speed;
 
     private bool slowingDown = false;
 
@@ -31,11 +31,11 @@ public class NpcCar : MonoBehaviour
 
         if (carCount >= 1)
         {
-            speed = 0.1f;
+            speed = 0.2f;
         }
         else
         {
-            speed = 3f;
+            speed = Random.Range(minSpeed, maxSpeed);
         }
         // if (transform.position.y > despawnY) Destroy(gameObject);
     }

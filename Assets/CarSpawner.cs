@@ -26,7 +26,7 @@ public class CarSpawner : MonoBehaviour
     {
         if (laneXs == null || laneXs.Length == 0)
         {
-            Debug.LogWarning("CarSpawner: laneXs is empty. Add lane center X positions.");
+            Debug.LogWarning("CarSpawner: lane is empty. Add lane center X positions.");
             laneXs = new float[0];
         }
         lastCarInLane = new Transform[laneXs.Length];
