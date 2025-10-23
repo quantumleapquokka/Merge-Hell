@@ -102,6 +102,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   despawnY: 10
+  speed: 0
 --- !u!212 &-4490348208526781051
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -296,8 +297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b20ca6c52ad1f8a4f9f8123a8ea69c7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCcarSound
-  player: {fileID: 3609340159282911266, guid: a83bd988a0200a8f89ab9fbb2740f848, type: 3}
-  hornSource: {fileID: 0}
+  player: {fileID: 0}
+  hornSource: {fileID: 2662587281188732653}
   detectionRadius: 5
   maxVolume: 1
   volumeIncreaseSpeed: 1
