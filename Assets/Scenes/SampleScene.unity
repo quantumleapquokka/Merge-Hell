@@ -430,6 +430,59 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45bc224a027b5c24eb8ff4ad2b003cba, type: 3}
+--- !u!1 &541174152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 541174154}
+  - component: {fileID: 541174153}
+  m_Layer: 0
+  m_Name: LaneSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &541174153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541174152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a57972f80ea62f43983e0e26e84b67e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  lanePrefab: {fileID: 8930652312023209464}
+  startY: 0
+  spacingY: 6
+  prewarm: 3
+  follow: {fileID: 560159026}
+  aheadDistance: 40
+  behindCullDistance: 25
+  maxActive: 10
+  container: {fileID: 0}
+--- !u!4 &541174154
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541174152}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.12, y: -0.15, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &560159021 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3410856393404667650, guid: a83bd988a0200a8f89ab9fbb2740f848, type: 3}
@@ -762,3 +815,4 @@ SceneRoots:
   - {fileID: 520184350}
   - {fileID: 165211537}
   - {fileID: 122797372}
+  - {fileID: 541174154}
