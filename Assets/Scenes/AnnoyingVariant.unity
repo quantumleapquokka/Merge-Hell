@@ -844,7 +844,7 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
+    x: 0.25
     y: 0
     width: 0.5
     height: 1
@@ -2883,6 +2883,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5437406091135665410, guid: 2690425d1a9432e45bd96dab998da4a5, type: 3}
+      propertyPath: winTextObject
+      value: 
+      objectReference: {fileID: 953684577}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

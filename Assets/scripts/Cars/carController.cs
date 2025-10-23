@@ -10,12 +10,25 @@ public class carController : MonoBehaviour
 
     public bool invincible = false;
 
+    public GameObject winTextObject;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GameObject winText = transform.Find("Canvas").gameObject;
-        winText.SetActive(true);
-        winText.GetComponent<TextMeshPro>().enabled = true;
+        // GameObject winText = transform.Find("Canvas").gameObject;
+        // winText.SetActive(true);
+        // winText.GetComponent<TextMeshPro>().enabled = true;
+        if (winTextObject != null)
+        {
+            winTextObject.SetActive(true);
+            var text = winTextObject.GetComponent<TextMeshPro>();
+            if (text != null)
+                text.enabled = true;
+        }
+        else
+        {
+            Debug.LogWarning("winTextObject not assigned in carController!");
+        }
     }
 
     // Update is called once per frame

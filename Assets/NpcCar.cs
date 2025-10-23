@@ -18,6 +18,8 @@ public class NpcCar : MonoBehaviour
 
     private int carCount = 0;
 
+    bool speed_set = false;
+
     void Start()
     {
         boxCollider = transform.Find("CollisionPrevention").GetComponent<BoxCollider2D>();
@@ -31,10 +33,15 @@ public class NpcCar : MonoBehaviour
 
         if (carCount >= 1)
         {
-            speed = 0.2f;
+            if (speed_set == false)
+            {
+                speed = Random.Range(0.02f, 0.1f);
+                speed_set = true;
+            }
         }
         else
         {
+            speed_set = false;
             speed = Random.Range(minSpeed, maxSpeed);
         }
         // if (transform.position.y > despawnY) Destroy(gameObject);
@@ -45,10 +52,18 @@ public class NpcCar : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         carCount++;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            speed = 0;
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            speed = Random.Range(minSpeed, maxSpeed);
+        }
         carCount--;
     }
     
