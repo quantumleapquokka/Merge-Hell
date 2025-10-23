@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 public class NPCcarSound : MonoBehaviour
 {
@@ -10,18 +11,24 @@ public class NPCcarSound : MonoBehaviour
     private void Start()
     {
         if (hornSource == null)
+        {
             hornSource = GetComponent<AudioSource>();
-
+        }
         // Start playing the horn sound at 0 volume
         hornSource.volume = 0f;
         
     hornSource.loop = true;
         hornSource.Play();
+        Debug.Log("playing horn!");
     }
 
     private void Update()
     {
-        if (player == null) return;
+        if (player == null)
+        {
+            Debug.Log("PROBLEM!!!");
+            return;
+        }
 
         // Calculate distance between player and this NPC car
         float distance = Vector2.Distance(transform.position, player.position);

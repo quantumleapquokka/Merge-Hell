@@ -116,6 +116,8 @@ public class FrontSpawner : MonoBehaviour
         var car = Instantiate(npcCarPrefab, pos, Quaternion.identity);
 
         NpcCar carScript = car.GetComponent<NpcCar>();
+        NPCcarSound soundScript = car.GetComponent<NPCcarSound>();
+        soundScript.player = player;
         carScript.maxSpeed = 0.5f;
 
         lastCarInLane[laneIndex] = car != null ? car.transform : null;

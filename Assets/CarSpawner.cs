@@ -87,6 +87,9 @@ public class CarSpawner : MonoBehaviour
         var pos = new Vector3(x, yPos, 0f);
         var car = Instantiate(npcCarPrefab, pos, Quaternion.identity);
 
+        NPCcarSound soundScript = car.GetComponent<NPCcarSound>();
+        soundScript.player = player;
+
         lastCarInLane[laneIndex] = car.transform; // track the newest one for spacing
     }
 
